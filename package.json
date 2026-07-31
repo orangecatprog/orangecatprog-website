@@ -1,26 +1,31 @@
 {
-  "name": "orangecatprog-website",
-  "type": "module",
-  "version": "0.0.1",
-  "engines": {
-    "node": ">=22.12.0"
-  },
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^7.1.6"
-  },
-  "devDependencies": {
-    "@eslint/css": "^1.4.0",
-    "@eslint/js": "^10.0.1",
-    "@eslint/json": "^2.0.1",
-    "@eslint/markdown": "^8.0.3",
-    "eslint": "^10.8.0",
-    "globals": "^17.8.0",
-    "typescript-eslint": "^8.65.0"
-  }
+    "name": "orangecatprog-website",
+    "type": "module",
+    "version": "0.0.1",
+    "engines": {
+        "node": ">=22.12.0"
+    },
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "lint": "eslint . --ext .ts,.js,.mjs,.cjs,.md,.json,.jsonc,.json5,.css",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "astro": "^7.1.6"
+    },
+    "devDependencies": {
+        "@eslint/css": "^1.4.0",
+        "@eslint/js": "^10.0.1",
+        "@eslint/json": "^2.0.1",
+        "@eslint/markdown": "^8.0.3",
+        "eslint": "^10.8.0",
+        "eslint-config-prettier": "^10.1.8",
+        "globals": "^17.8.0",
+        "jiti": "^2.7.0",
+        "prettier": "3.9.6",
+        "typescript-eslint": "^8.65.0"
+    }
 }
