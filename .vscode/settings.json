@@ -1,0 +1,13 @@
+{
+    "emmet.includeLanguages": {
+        "astro": "html"
+    },
+    "emmet.showExpandedAbbreviation": "always",
+    "emmet.triggerExpansionOnTab": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "editor.suggestOnTriggerCharacters": true
+}

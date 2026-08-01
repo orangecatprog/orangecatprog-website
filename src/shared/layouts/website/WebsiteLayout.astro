@@ -1,0 +1,15 @@
+---
+import MainLayout from "../main/MainLayout.astro";
+import Header from "./header/Header.astro";
+import Footer from "./footer/Footer.astro";
+---
+
+<MainLayout>
+    <slot name="head" slot="head" />
+
+    <Header />
+    <main>
+        <slot />
+    </main>
+    <Footer />
+</MainLayout>
