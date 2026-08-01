@@ -31,6 +31,9 @@ jobs:
             - name: Prettier config
               run: bun x prettier --find-config-path src/pages/index.astro
 
+            - name: Show formatting differences
+              run: bun x prettier --check . --log-level debug
+
             - name: Prettier debug
               run: |
                   bunx prettier --version
