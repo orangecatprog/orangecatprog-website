@@ -28,10 +28,16 @@ jobs:
             - name: Install dependencies
               run: bun install --frozen-lockfile
 
+            - name: Prettier config
+              run: bun x prettier --find-config-path src/pages/index.astro
+
             - name: Prettier debug
               run: |
                   bunx prettier --version
                   bunx prettier --find-config-path .prettierrc
+
+            - name: Format fix test
+              run: bun x prettier --write .
 
             - name: Check formatting
               run: bun x prettier --check .
