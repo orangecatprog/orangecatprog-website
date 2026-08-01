@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import "./Hero.css";
+
+import logo_2000 from "@/assets/icons/icon_2000.png";
+---
+
+<section class="hero">
+    <div class="hero__content">
+        <p class="hero__badge">Orange Cat Programming</p>
+
+        <h1 class="hero__title">Herramientas modernas para otros desarrolladores.</h1>
+
+        <p class="hero__description">
+            Software escalable, buenas prácticas y sistemas modulares para ahorrar tiempo. Diseñado
+            por desarrolladores para desarrolladores.
+        </p>
+
+        <div class="hero__actions">
+            <!-- PrimaryButton -->
+            <!-- SecondaryButton -->
+        </div>
+    </div>
+
+    <div class="hero__image">
+        <Image
+            src={logo_2000}
+            class="hero__logo"
+            loading="eager"
+            alt="Logotipo de Orange Cat Programming"
+        />
+    </div>
+</section>

@@ -1,0 +1,12 @@
+:root {
+    --color-background: #000000;
+    --color-text: #ffffff;
+    --color-border: #444;
+    --color-primary: #ff6600;
+}
+
+html[data-theme="light"] {
+    --color-background: #ffffff;
+    --color-text: #111111;
+    --color-border: #999999;
+}
