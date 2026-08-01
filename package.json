@@ -13,8 +13,8 @@
         "prepare": "husky",
         "lint": "eslint . --ext .ts,.js,.mjs,.cjs,.md,.css,.astro",
         "lint:fix": "eslint . --ext .ts,.js,.mjs,.cjs,.md,.css,.astro --fix",
-        "format": "prettier",
-        "format:fix": "prettier --write ."
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
     },
     "dependencies": {
         "astro": "^7.1.6"
