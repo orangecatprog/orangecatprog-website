@@ -36,9 +36,6 @@ jobs:
                   bunx prettier --version
                   bunx prettier --find-config-path .prettierrc
 
-            - name: Format fix test
-              run: bun x prettier --write .
-
             - name: Check formatting
               run: bun x prettier --check .
 

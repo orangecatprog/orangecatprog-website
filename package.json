@@ -14,12 +14,14 @@
         "lint": "eslint . --ext .ts,.js,.mjs,.cjs,.md,.css,.astro",
         "lint:fix": "eslint . --ext .ts,.js,.mjs,.cjs,.md,.css,.astro --fix",
         "format": "prettier --write .",
-        "format:check": "prettier --check ."
+        "format:check": "prettier --check .",
+        "check": "astro check"
     },
     "dependencies": {
         "astro": "^7.1.6"
     },
     "devDependencies": {
+        "@astrojs/check": "^0.9.10",
         "@commitlint/cli": "^21.2.1",
         "@commitlint/config-conventional": "^21.2.0",
         "@commitlint/types": "^21.2.0",
