@@ -8,5 +8,5 @@
 html[data-theme="light"] {
     --color-background: #ffffff;
     --color-text: #111111;
-    --color-border: #999999;
+    --color-border: #bbb;
 }

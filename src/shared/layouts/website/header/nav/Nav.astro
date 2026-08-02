@@ -4,13 +4,15 @@ import "./Nav.css";
 
 import mainNav from "./mainNav.json";
 
-import logo_2000 from "@/assets/icons/icon_2000.png";
+import logo_2000 from "@/assets/icons/orange/icon_2000.png";
+import ThemeToggler from "../../theme/ThemeToggler.astro";
 ---
 
 <nav class="nav">
     <a href="/" class="nav__logo">
         <Image src={logo_2000} alt="Logo de Orange Cat" width="50" loading="eager" />
     </a>
+    <ThemeToggler />
 
     <input type="checkbox" id="menu-toggle" class="nav__checkbox" />
 

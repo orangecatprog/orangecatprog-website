@@ -8,3 +8,11 @@ body {
 * {
     box-sizing: border-box;
 }
+
+html[data-theme="light"] .only_dark {
+    display: none;
+}
+
+html:not([data-theme="light"]) .only_light {
+    display: none;
+}

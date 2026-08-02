@@ -1,0 +1,37 @@
+---
+import "./ThemeToggler.css";
+
+import black from "@/assets/icons/black/b_icon.svg";
+import white from "@/assets/icons/white/w_icon.svg";
+import { Image } from "astro:assets";
+---
+
+<label class="theme-switch">
+    <input id="theme-toggle" type="checkbox" />
+
+    <span class="theme-slider">
+        <span class="theme-thumb">
+            <Image class="cat-light" src={black} alt="" loading="eager" />
+            <Image class="cat-dark" src={white} alt="" loading="eager" />
+        </span>
+    </span>
+</label>
+
+<script is:inline>
+    const html = document.documentElement;
+    const toggle = document.getElementById("theme-toggle");
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+        html.dataset.theme = "dark";
+        toggle.checked = true;
+    }
+
+    toggle.addEventListener("change", () => {
+        const dark = toggle.checked;
+
+        html.dataset.theme = dark ? "dark" : "light";
+        localStorage.setItem("theme", dark ? "dark" : "light");
+    });
+</script>

@@ -5,10 +5,15 @@ import Footer from "./footer/Footer.astro";
 
 import "./styles/ColorScheme.css";
 import "./styles/GenericStyles.css";
+import ThemeTogglerPS from "./theme/ThemeTogglerPS.astro";
 ---
 
 <MainLayout>
-    <slot name="head" slot="head" />
+    <Fragment name="head" slot="head">
+        <ThemeTogglerPS />
+
+        <slot name="head" />
+    </Fragment>
 
     <Header />
     <main>

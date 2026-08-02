@@ -2,18 +2,34 @@
 import { Image } from "astro:assets";
 import "./Hero.css";
 
-import logo_2000 from "@/assets/icons/icon_2000.png";
+import w_logo_2000 from "@/assets/icons/white/w_icon_2000.png";
+import b_logo_2000 from "@/assets/icons/black/b_icon_2000.png";
+import DynamicText from "@/shared/dynamic/dynamicText/DynamicText.tsx";
 ---
 
 <section class="hero">
     <div class="hero__content">
-        <p class="hero__badge">Orange Cat Programming</p>
+        <span class="hero__badge">Orange Cat Programming</span>
 
-        <h1 class="hero__title">Herramientas modernas para otros desarrolladores.</h1>
+        <h1 class="hero__title">Herramientas modernas para desarrolladores.</h1>
+
+        <span class="hero__dt">
+            &nbsp;<DynamicText
+                texts={[
+                    "Sistemas con IA",
+                    "Software modular",
+                    "Full-stack cubierto",
+                    "Arquitectura y buenas prácticas",
+                    "Herramientas modernas",
+                    "Frameworks y librerías",
+                ]}
+                client:load
+            />
+        </span>
 
         <p class="hero__description">
-            Software escalable, buenas prácticas y sistemas modulares para ahorrar tiempo. Diseñado
-            por desarrolladores para desarrolladores.
+            Software modular, escalable, buenas prácticas y sistemas modulares para ahorrar tiempo.
+            Diseñado por desarrolladores para desarrolladores.
         </p>
 
         <div class="hero__actions">
@@ -24,8 +40,14 @@ import logo_2000 from "@/assets/icons/icon_2000.png";
 
     <div class="hero__image">
         <Image
-            src={logo_2000}
-            class="hero__logo"
+            src={w_logo_2000}
+            class="hero__logo only_dark"
+            loading="eager"
+            alt="Logotipo de Orange Cat Programming"
+        />
+        <Image
+            src={b_logo_2000}
+            class="hero__logo only_light"
             loading="eager"
             alt="Logotipo de Orange Cat Programming"
         />
